@@ -1,0 +1,88 @@
+body {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(3, 3, 24);
+}
+
+form {
+  width: 40%;
+  color: white;
+  padding: 0.5em;
+  background-color: rgb(11, 11, 61);
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+label,
+input {
+  display: block;
+}
+
+label {
+  margin: 0.25em auto;
+}
+
+input {
+  margin: 0.25em auto 2em auto;
+}
+
+#submit-button {
+  font-size: 2em;
+  font-weight: bold;
+  border-style: solid;
+  border-color: lightslategray;
+  border-radius: 10px;
+  border-width: 3px;
+  background-color: lightgreen;
+  margin: 0.25em auto;
+}
+
+#submit-button:hover {
+  background-color: rgb(162, 230, 162);
+  color: rgb(41, 41, 41);
+}
+
+#submit-button:active {
+  background-color: rgb(75, 128, 75);
+  color: black;
+}
+
+img {
+  height: auto;
+  width: 35em;
+}
+
+.meme-div {
+  position: relative;
+  width: fit-content;
+  box-sizing: border-box;
+  margin: 1em;
+}
+
+.meme-button {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-style: solid;
+  border-color: lightslategray;
+  border-radius: 10px;
+  border-width: 3px;
+  background-color: lightcoral;
+}
+
+.meme-button:hover {
+  background-color: rgb(240, 154, 154);
+  color: rgb(41, 41, 41);
+}
+
+.meme-button:active {
+  background-color: rgb(236, 81, 81);
+  color: black;
+}
+
+#meme-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
