@@ -68,22 +68,24 @@ function checkTextLength(inputString, context, maxLength) {
   let outputArray = [""];
   if (context.measureText(inputString).width > maxLength) {
     let textArray = inputString.split(/\s/);
-    for (let i = 0; i < textArray.length-1; i++){
+    for (let i = 0; i < textArray.length - 1; i++) {
       outputArray[outputArray.length - 1] += textArray[i];
-      let lengthAfterNextString = context.measureText(outputArray[outputArray.length - 1]).width;
-      lengthAfterNextString += context.measureText(" " + textArray[i + 1]).width;
+      let lengthAfterNextString = context.measureText(
+        outputArray[outputArray.length - 1]
+      ).width;
+      lengthAfterNextString += context.measureText(
+        " " + textArray[i + 1]
+      ).width;
       if (lengthAfterNextString < maxLength) {
         outputArray[outputArray.length - 1] += " ";
-      }
-      else {
+      } else {
         outputArray.push("");
       }
       if (i == textArray.length - 2) {
-        outputArray[outputArray.length - 1] += textArray[i+1];
+        outputArray[outputArray.length - 1] += textArray[i + 1];
       }
     }
-  }
-  else {
+  } else {
     outputArray[0] = inputString;
   }
   return outputArray;
@@ -92,16 +94,35 @@ function checkTextLength(inputString, context, maxLength) {
 function addCanvasText(textArray, image, context, heightRatio) {
   let ratio = heightRatio;
   if (ratio == 0.2) {
-    for (let i = 0; i < textArray.length; i++){
-      context.strokeText(textArray[i], image.width * 0.5, image.height * ratio, image.width * 0.95);
-      context.fillText(textArray[i], image.width * 0.5, image.height * ratio, image.width * 0.95);
+    for (let i = 0; i < textArray.length; i++) {
+      context.strokeText(
+        textArray[i],
+        image.width * 0.5,
+        image.height * ratio,
+        image.width * 0.95
+      );
+      context.fillText(
+        textArray[i],
+        image.width * 0.5,
+        image.height * ratio,
+        image.width * 0.95
+      );
       ratio += 0.2;
     }
-  }
-  else {
-    for (let i = textArray.length-1; i >= 0; i--){
-      context.strokeText(textArray[i], image.width * 0.5, image.height * ratio, image.width * 0.95);
-      context.fillText(textArray[i], image.width * 0.5, image.height * ratio, image.width * 0.95);
+  } else {
+    for (let i = textArray.length - 1; i >= 0; i--) {
+      context.strokeText(
+        textArray[i],
+        image.width * 0.5,
+        image.height * ratio,
+        image.width * 0.95
+      );
+      context.fillText(
+        textArray[i],
+        image.width * 0.5,
+        image.height * ratio,
+        image.width * 0.95
+      );
       ratio -= 0.2;
     }
   }
