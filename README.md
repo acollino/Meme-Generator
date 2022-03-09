@@ -1,4 +1,4 @@
-# Meme-Generator
+# Meme Generator
 A meme generator to create custom memes from online images! This app was created for Springboard's Unit 5 assessment.
 The app utilizes form and input elements to obtain information from the user, then uses Javascript-created img and canvas elements
 to display the generated meme within a flexbox container. This allows you to generate and display multiple memes at once, and users
